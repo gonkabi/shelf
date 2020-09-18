@@ -1,4 +1,18 @@
 # R tips
+
+## Contents
+<!--ts-->
+   * [R tips](#r-tips)
+      * [Contents](#contents)
+      * [Data Shaping](#data-shaping)
+         * [Change column position](#change-column-position)
+         * [Select multiple columns and execute](#select-multiple-columns-and-execute)
+         * [Separate a column into columns by key](#separate-a-column-into-columns-by-key)
+
+<!-- Added by: shota, at: Fri Sep 18 16:30:00 JST 2020 -->
+
+<!--te-->
+
 ## Data Shaping
 ### Change column position
 relocate() change column position.
