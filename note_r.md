@@ -1,5 +1,5 @@
 # R tips
-## dplyr
+## Data Shaping
 ### Change column position
 relocate() change column position.
 ```
@@ -60,3 +60,26 @@ Try to do mutate() + select() + *your_function()*
 5 3.72e+1 C1orf112       4.50 5.36e+0    10.0      2.75    3.64      4.34
 6 2.37e+3 FGR           83.0  1.59e+2   191.     188.    135.      118.
 ```
+### Separate a column into columns by key
+Use tidyr::separate
+```
+> before %>% head(3)
+# A tibble: 6 x 3
+  cell_type sample     score
+  <chr>     <chr>      <dbl>
+1 B cell    Sick_64  0.0172
+2 B cell    Sick_87  0.00718
+3 B cell    Sick_105 0.0286
+
+> after <- before %>%
++     separate(sample, into = c("Condition", "Sample_ID"), sep = "_", remove = FALSE)
+
+> after %>% head(3)
+# A tibble: 6 x 5
+  cell_type sample   Condition Sample_ID   score
+  <chr>     <chr>    <chr>     <chr>       <dbl>
+1 B cell    Sick_64  Sick      64        0.0172
+2 B cell    Sick_87  Sick      87        0.00718
+3 B cell    Sick_105 Sick      105       0.0286
+```
+
