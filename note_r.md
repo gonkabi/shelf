@@ -100,7 +100,7 @@ Use tidyr::separate
 ```
 
 ## Visualize: ggplot2
-### Change angles of x-axis lables
+### Change angles of x-axis labels
 Use theme() as following.
 ```
 theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
