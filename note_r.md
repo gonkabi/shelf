@@ -9,9 +9,9 @@
          * [Select multiple columns and execute](#select-multiple-columns-and-execute)
          * [Separate a column into columns by key](#separate-a-column-into-columns-by-key)
       * [Visualize: ggplot2](#visualize-ggplot2)
-         * [Change angles of x-axis lables](#change-angles-of-x-axis-lables)
+         * [Change angles of x-axis labels](#change-angles-of-x-axis-labels)
 
-<!-- Added by: shota, at: Thu Oct  1 12:11:19 JST 2020 -->
+<!-- Added by: shota, at: Thu Oct  1 14:35:39 JST 2020 -->
 
 <!--te-->
 
