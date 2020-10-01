@@ -105,3 +105,11 @@ Use theme() as following.
 ```
 theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
+
+## Visualize: Color Palettes
+### Library & Function
+Recommended palettes are following:
+
+* ggthemes::scale_fill_tableau(): if colors <= 20
+* ggsci::scale_fill_ucscgb(): if colors > 20
+
