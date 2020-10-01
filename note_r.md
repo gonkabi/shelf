@@ -10,8 +10,10 @@
          * [Separate a column into columns by key](#separate-a-column-into-columns-by-key)
       * [Visualize: ggplot2](#visualize-ggplot2)
          * [Change angles of x-axis labels](#change-angles-of-x-axis-labels)
+      * [Visualize: Miscellaneous](#visualize-miscellaneous)
+         * [Color Palettes](#color-palettes)
 
-<!-- Added by: shota, at: Thu Oct  1 14:35:39 JST 2020 -->
+<!-- Added by: shota, at: Thu Oct  1 20:08:34 JST 2020 -->
 
 <!--te-->
 
@@ -106,8 +108,8 @@ Use theme() as following.
 theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
 
-## Visualize: Color Palettes
-### Library & Function
+## Visualize: Miscellaneous
+### Color Palettes
 Recommended palettes are following:
 
 * ggthemes::scale_fill_tableau(): if colors <= 20
