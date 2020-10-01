@@ -8,8 +8,10 @@
          * [Change column position](#change-column-position)
          * [Select multiple columns and execute](#select-multiple-columns-and-execute)
          * [Separate a column into columns by key](#separate-a-column-into-columns-by-key)
+      * [Visualize: ggplot2](#visualize-ggplot2)
+         * [Change angles of x-axis lables](#change-angles-of-x-axis-lables)
 
-<!-- Added by: shota, at: Fri Sep 18 16:30:00 JST 2020 -->
+<!-- Added by: shota, at: Thu Oct  1 12:11:19 JST 2020 -->
 
 <!--te-->
 
@@ -97,3 +99,9 @@ Use tidyr::separate
 3 B cell    Sick_105 Sick      105       0.0286
 ```
 
+## Visualize: ggplot2
+### Change angles of x-axis labels
+Use theme() as following.
+```
+theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+```
