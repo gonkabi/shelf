@@ -10,10 +10,11 @@
          * [Separate a column into columns by key](#separate-a-column-into-columns-by-key)
       * [Visualize: ggplot2](#visualize-ggplot2)
          * [Change angles of x-axis labels](#change-angles-of-x-axis-labels)
+         * [How to make barplot with the same width?](#how-to-make-barplot-with-the-same-width)
       * [Visualize: Miscellaneous](#visualize-miscellaneous)
          * [Color Palettes](#color-palettes)
 
-<!-- Added by: shota, at: Thu Oct  1 20:08:34 JST 2020 -->
+<!-- Added by: shota, at: Wed Oct 14 11:24:58 JST 2020 -->
 
 <!--te-->
 
@@ -106,6 +107,12 @@ Use tidyr::separate
 Use theme() as following.
 ```
 theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+```
+
+### How to make barplot with the same width?
+Use facet_grid() with space = "free".  
+```
+facet_grid(. ~ VARIABLE, space = "free", scale = "free")
 ```
 
 ## Visualize: Miscellaneous
