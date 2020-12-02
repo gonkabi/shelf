@@ -3,6 +3,7 @@
    * [Contents](#contents)
    * [Common](#common)
       * [Transfer Data](#transfer-data)
+      * [Troubleshooting conda activation](#troubleshooting-conda-activation)
    * [LSF](#lsf)
       * [Basic Commands](#basic-commands)
          * [bsub](#bsub)
@@ -16,7 +17,7 @@
          * [bapp](#bapp)
       * [Job Array](#job-array)
 
-<!-- Added by: shota, at: Wed Dec  2 16:48:39 JST 2020 -->
+<!-- Added by: shota, at: Wed Dec  2 18:25:13 JST 2020 -->
 
 <!--te-->
 # Common
@@ -24,6 +25,23 @@
 The scp command is used to copy files and directories from one machine to another.  
 ```
 scp USER_NAME@FROM_HOST:PATH_TO_FILE USER_NAME@TO_HOST:PATH_TO_FILE
+```
+
+## Troubleshooting conda activation
+A following error massage will come up if you do not take care conda configulation.  
+It will be often happened when you submit a job with a shell script activating conda env by `bsub/qsub`.  
+```
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+```
+
+To solve this error, add the description to the shell script.  
+```
+eval "$(~/miniconda3/bin/conda shell.bash hook)"
+conda activate CONDA_ENV
 ```
 
 # LSF
