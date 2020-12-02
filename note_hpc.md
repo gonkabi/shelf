@@ -14,8 +14,9 @@
          * [bqueues](#bqueues)
          * [lsloads](#lsloads)
          * [bapp](#bapp)
+      * [Job Array](#job-array)
 
-<!-- Added by: shota, at: Wed Dec  2 12:15:31 JST 2020 -->
+<!-- Added by: shota, at: Wed Dec  2 16:48:39 JST 2020 -->
 
 <!--te-->
 # Common
@@ -86,7 +87,8 @@ Array Number: 1
 ```
 
 The job array job slot limit is used to specify the maximum number of jobs submitted from a job array that are allowed to run at any one time.  
+JOB_SLOT_LIMIT must be a positive integer less than the maximum index value of the job array.  
 ```
-bsub -J JOBNAME[INDEX_LIST]%JOB_SLOT_LIMIT # JOB_SLOT_LIMIT must be a positive integer
+bsub -J JOBNAME[INDEX_LIST]%JOB_SLOT_LIMIT
 ```
 
