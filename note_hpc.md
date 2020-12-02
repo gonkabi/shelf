@@ -63,3 +63,30 @@ Displays dynamic load indices for hosts.
 ### bapp
 Displays information about jobs attached to application profiles
 
+## Job Array
+Use option -J[START-END:STEP] to submit job array.  
+LSF sets LSB_JOBINDEX in the execution environment to the job array index of the current job. LSB_JOBINDEX is set for all jobs. For non-array jobs, LSB_JOBINDEX is set to zero.  
+
+Example code
+```
+bsub -J array[1-4] sh test_arrayjob.sh
+```
+
+Content of test_arrayjob.sh
+```
+#!/bin/sh
+mkdir -p output/arrayjob
+OUTPUT_PREFIX="./output/arrayjob/test_"/
+echo "Array Number: "$LSB_JOBINDEX > $OUTPUT_PREFIX$LSB_JOBINDEX".txt"/
+```
+
+Content of ./output/arrayjob/test_1.txt.
+```
+Array Number: 1
+```
+
+The job array job slot limit is used to specify the maximum number of jobs submitted from a job array that are allowed to run at any one time.  
+```
+bsub -J JOBNAME[INDEX_LIST]%JOB_SLOT_LIMIT # JOB_SLOT_LIMIT must be a positive integer
+```
+
