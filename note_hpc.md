@@ -15,7 +15,7 @@
          * [lsloads](#lsloads)
          * [bapp](#bapp)
 
-<!-- Added by: shota, at: Tue Dec  1 17:43:38 JST 2020 -->
+<!-- Added by: shota, at: Wed Dec  2 12:13:33 JST 2020 -->
 
 <!--te-->
 # Common
@@ -30,7 +30,7 @@ scp USER_NAME@FROM_HOST:PATH_TO_FILE USER_NAME@TO_HOST:PATH_TO_FILE
 ### bsub
 Submits a job.  
 * **-app <APPLICATION_PROFILE_NAME>:** Submits the job to the specified application profile
-* **-cwd:** Specifies the current working directory
+* **-cwd <PATH>:** Specifies the current working directory
 * **-e <ERROR_FILE>:** Appends the standard error output to a file
 * **-i <INPUT_FILE>:** Getes the stadard input for the job from specified file
 * **-J <JOB_NAME>:** Assigns the specified name to the job
@@ -43,7 +43,7 @@ Submits a job.
 Displays information about jobs.  
 
 ### bhist
-Displays historicalinformation about jobs.  
+Displays historical information about jobs.  
 
 ### bkill
 Sends a signal to a job.  
