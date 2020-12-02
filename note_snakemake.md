@@ -11,7 +11,7 @@ Author provides website including tutorial. This is good source to know Snakemak
 A vim sytax highligth definition for Snakemake is provided by following repository.  
 [github: snakemake/misc/vim](https://github.com/snakemake/snakemake/tree/master/misc/vim)
 
-To activate syntax automaticaly, add the following descriptions.  
+To activate syntax automatically, add the following descriptions to `.vimrc`.  
 ```
 au BufNewFile,BufRead Snakefile set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
