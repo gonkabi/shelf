@@ -5,11 +5,13 @@
       * [Change default editor](#change-default-editor)
       * [Set alias for git log](#set-alias-for-git-log)
       * [Color setting](#color-setting)
+   * [Usage](#usage)
+      * [Check difference between local and remote](#check-difference-between-local-and-remote)
    * [Assist Tool](#assist-tool)
       * [gh-md-toc](#gh-md-toc)
       * [gitignore.io](#gitignoreio)
 
-<!-- Added by: shota, at: Fri Dec  4 16:55:19 JST 2020 -->
+<!-- Added by: shota, at: 2020年 12月  5日 土曜日 00:34:03 JST -->
 
 <!--te-->
 
@@ -33,6 +35,23 @@ Change color setting black and white into color.
 git config --global color.ui true
 ```
 
+# Usage
+## Check difference between local and remote
+There are two major approaches.  
+
+**fetch + diff**  
+It'll show the detail information.  
+```
+git fetch origin
+git diff origin/master
+```
+
+**git remote show**  
+It can be done by just one command.  
+To check status, see the end of line; `local out of date` or `up to date`.
+```
+git remote show origin
+```
 # Assist Tool
 ## gh-md-toc
 gh-md-toc is for you if you want to generate TOC for README.md or GitHub's wiki page and don't want to install any additional software.  
