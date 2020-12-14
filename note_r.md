@@ -8,13 +8,16 @@
          * [Change column position](#change-column-position)
          * [Select multiple columns and execute](#select-multiple-columns-and-execute)
          * [Separate a column into columns by key](#separate-a-column-into-columns-by-key)
+         * [Padding](#padding)
+         * [Change factor levels by manual](#change-factor-levels-by-manual)
+         * [Change value with referring another column](#change-value-with-referring-another-column)
       * [Visualize: ggplot2](#visualize-ggplot2)
          * [Change angles of x-axis labels](#change-angles-of-x-axis-labels)
          * [How to make barplot with the same width?](#how-to-make-barplot-with-the-same-width)
       * [Visualize: Miscellaneous](#visualize-miscellaneous)
          * [Color Palettes](#color-palettes)
 
-<!-- Added by: shota, at: Wed Oct 14 11:24:58 JST 2020 -->
+<!-- Added by: shota, at: Mon Dec 14 18:15:32 JST 2020 -->
 
 <!--te-->
 
@@ -100,6 +103,28 @@ Use tidyr::separate
 1 B cell    Sick_64  Sick      64        0.0172
 2 B cell    Sick_87  Sick      87        0.00718
 3 B cell    Sick_105 Sick      105       0.0286
+```
+
+### Padding
+`str_pad()` can be used for padding.  
+```
+res <- data %>%
+    dplyr::mutate(attribute = str_pad(attribute, 4, pad = 0))
+```
+
+### Change factor levels by manual
+`forcats::fct_relevel` can be used for modifying levels.  
+```
+res <- data %>%
+    dplyr::mutate(attribute = fct_relevel(attribute, "FCT_A", "FCT_B", "FCT_C"))
+```
+
+### Change value with referring another column
+Use `replace()`  
+```
+mtcars %>%
+     mutate(mpg=replace(mpg, cyl==4, NA)) %>%
+     as.data.frame()
 ```
 
 ## Visualize: ggplot2
