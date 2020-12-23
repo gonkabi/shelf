@@ -5,13 +5,14 @@
       * [Change default editor](#change-default-editor)
       * [Set alias for git log](#set-alias-for-git-log)
       * [Color setting](#color-setting)
+      * [git status: display/hide untracked files](#git-status-displayhide-untracked-files)
    * [Usage](#usage)
       * [Check difference between local and remote](#check-difference-between-local-and-remote)
    * [Assist Tool](#assist-tool)
       * [gh-md-toc](#gh-md-toc)
       * [gitignore.io](#gitignoreio)
 
-<!-- Added by: shota, at: 2020年 12月  5日 土曜日 00:34:03 JST -->
+<!-- Added by: shota, at: Wed Dec 23 10:53:33 JST 2020 -->
 
 <!--te-->
 
@@ -33,6 +34,29 @@ git config --global alias.lol "log --graph --decorate --pretty=oneline --all --a
 Change color setting black and white into color.  
 ```
 git config --global color.ui true
+```
+
+## git status: display/hide untracked files
+**Approach: config**  
+Set config to hide untracked files.  
+```
+git config status.showuntrackedfiles no
+```
+
+Set config to display untracked files.  
+```
+git config --unset status.showuntrackedfiles
+```
+
+**Approach: option**  
+Use option `-uno` to hide untracked files.  
+```
+git status -uno
+```
+
+Use option `-u` to display untracked files.  
+```
+git status -u
 ```
 
 # Usage
