@@ -16,8 +16,10 @@
          * [How to make barplot with the same width?](#how-to-make-barplot-with-the-same-width)
       * [Visualize: Miscellaneous](#visualize-miscellaneous)
          * [Color Palettes](#color-palettes)
+      * [Install Packages](#install-packages)
+         * [ComplexHeatmap](#complexheatmap)
 
-<!-- Added by: shota, at: Mon Dec 14 18:15:32 JST 2020 -->
+<!-- Added by: shota, at: Mon Apr 12 21:15:28 JST 2021 -->
 
 <!--te-->
 
@@ -146,4 +148,9 @@ Recommended palettes are following:
 
 * ggthemes::scale_fill_tableau(): if colors <= 20
 * ggsci::scale_fill_ucscgb(): if colors > 20
+
+## Install Packages
+### ComplexHeatmap  
+The version 2.6.2 requires `cairo` package. It was defficult to install it by conda.  
+One of an approach to install `ComplexHeatmap` is to install the version 2.4.2 not requiring cairo package.  
 
