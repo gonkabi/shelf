@@ -5,7 +5,7 @@
    * [Useful Packages](#useful-packages)
    * [Save and Restore Environment](#save-and-restore-environment)
 
-<!-- Added by: shota, at: Tue Dec  1 18:42:15 JST 2020 -->
+<!-- Added by: shota, at: Thu Apr 15 16:45:53 JST 2021 -->
 
 <!--te-->
 
@@ -39,4 +39,17 @@ conda env export -n ENV_NAME > env_name.yml
 **Restore**  
 ```
 conda env create -f=env_name.yml
+```
+
+When you get following messages, `--no-builds` options might be a solution.  
+
+Problem  
+```
+Solving environment: failed
+ResolvePackageNotFound:
+```
+
+Solution  
+```
+conda env export -n ENV_NAME --no-builds > env_name.yml
 ```
